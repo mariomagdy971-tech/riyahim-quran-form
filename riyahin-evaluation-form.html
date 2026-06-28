@@ -100,6 +100,7 @@
             display: flex;
             gap: 15px;
             padding: 5px 0;
+            flex-wrap: wrap;
         }
         .radio-item, .checkbox-item {
             display: flex;
@@ -224,7 +225,6 @@
                 <input type="email" name="إيميل الطالب" placeholder="student@gmail.com">
             </div>
 
-			
             <div class="form-group">
                 <label>الحضور<span class="required-star">*</span></label>
                 <div class="radio-group">
@@ -234,36 +234,36 @@
                 </div>
             </div>
 
-			   <div class="form-group">
+            <div class="form-group">
                 <label>موضع ما تم حفظه في الحلقة السابقة<span class="required-star">*</span></label>
-                 <input type="text" name="ما تم حفظه في الحلقة السابقة" placeholder="أدخل السور أو الآيات الحالية">
+                <input type="text" name="ما تم حفظه في الحلقة السابقة" placeholder="أدخل السور أو الآيات الحالية">
             </div>
 
-   				<!-- First فئة الأداء -->
-				<label>فئة الأداء (الحلقة السابقة)</label>
-				<input type="radio" name="quality1" value="ممتاز"> ممتاز
-				<input type="radio" name="quality1" value="جيد جدا"> جيد جدا
-				<input type="radio" name="quality1" value="جيد"> جيد
-				<input type="radio" name="quality1" value="مقبول"> مقبول
-
+            <div class="form-group">
+                <label>فئة الأداء (الحلقة السابقة)</label>
+                <div class="radio-group">
+                    <div class="radio-item"><input type="radio" name="quality1" value="ممتاز"> ممتاز</div>
+                    <div class="radio-item"><input type="radio" name="quality1" value="جيد جدا"> جيد جدا</div>
+                    <div class="radio-item"><input type="radio" name="quality1" value="جيد"> جيد</div>
+                    <div class="radio-item"><input type="radio" name="quality1" value="مقبول"> مقبول</div>
                 </div>
             </div>
-			
+
             <div class="form-group">
                 <label>موضع المراجعة لما تم حفظه قديما<span class="required-star">*</span></label>
                 <input type="text" name="ما تم مراجعته قديما " placeholder="أدخل السور أو الآيات الحالية">
             </div>
 
- <div class="form-group">
-               <!-- Second فئة الأداء -->
-				<label>فئة الأداء (المراجعة)</label>
-				<input type="radio" name="quality2" value="ممتاز"> ممتاز
-				<input type="radio" name="quality2" value="جيد جدا"> جيد جدا
-				<input type="radio" name="quality2" value="جيد"> جيد
-				<input type="radio" name="quality2" value="مقبول"> مقبول
+            <div class="form-group">
+                <label>فئة الأداء (المراجعة)</label>
+                <div class="radio-group">
+                    <div class="radio-item"><input type="radio" name="quality2" value="ممتاز"> ممتاز</div>
+                    <div class="radio-item"><input type="radio" name="quality2" value="جيد جدا"> جيد جدا</div>
+                    <div class="radio-item"><input type="radio" name="quality2" value="جيد"> جيد</div>
+                    <div class="radio-item"><input type="radio" name="quality2" value="مقبول"> مقبول</div>
                 </div>
             </div>
-			
+
             <!-- 3. الحفظ والمراجعة -->
             <div class="section-title">الحفظ والمراجعة</div>
 
