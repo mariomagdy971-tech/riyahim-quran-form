@@ -224,6 +224,21 @@
                 <input type="email" name="إيميل الطالب" placeholder="student@gmail.com">
             </div>
 
+			
+            <div class="form-group">
+                <label>الحضور<span class="required-star">*</span></label>
+                <div class="radio-group">
+                    <div class="radio-item"><input type="radio" name="الحضور" value="حاضر" required> حاضر</div>
+                    <div class="radio-item"><input type="radio" name="الحضور" value="غائب"> غائب</div>
+                    <div class="radio-item"><input type="radio" name="الحضور" value="غائب باعتذار"> غائب باعتذار</div>
+                </div>
+            </div>
+
+			   <div class="form-group">
+                <label>موضع ما تم حفظه في الحلقة السابقة<span class="required-star">*</span></label>
+                 <input type="text" name="ما تم حفظه في الحلقة السابقة" placeholder="أدخل السور أو الآيات الحالية">
+            </div>
+			
             <div class="form-group">
                 <label>فئة الأداء<span class="required-star">*</span></label>
                 <div class="radio-group">
@@ -235,25 +250,23 @@
                 </div>
             </div>
 
+
             <div class="form-group">
-                <label>الحضور<span class="required-star">*</span></label>
+                <label>موضع المراجعة لما تم حفظه قديما<span class="required-star">*</span></label>
+                <input type="text" name="ما تم مراجعته قديما " placeholder="أدخل السور أو الآيات الحالية">
+            </div>
+
+ <div class="form-group">
+                <label>فئة الأداء<span class="required-star">*</span></label>
                 <div class="radio-group">
-                    <div class="radio-item"><input type="radio" name="الحضور" value="حاضر" required> حاضر</div>
-                    <div class="radio-item"><input type="radio" name="الحضور" value="غائب"> غائب</div>
-                    <div class="radio-item"><input type="radio" name="الحضور" value="غائب باعتذار"> غائب باعتذار</div>
+                    <div class="radio-item"><input type="radio" name="فئة الأداء" value="ممتاز" required> ممتاز</div>
+		      <div class="radio-item"><input type="radio" name="فئة الأداء" value="جيد جدا" required> جيد جدا</div>
+                    <div class="radio-item"><input type="radio" name="فئة الأداء" value="جيد"> جيد</div>
+                    <div class="radio-item"><input type="radio" name="فئة الأداء" value="مقبول"> مقبول</div>
+
                 </div>
             </div>
-
-            <div class="form-group">
-                <label>خطة المنهج<span class="required-star">*</span></label>
-                <select name="خطة المنهج" required>
-                    <option value="">اختر ...</option>
-                    <option value="حفظ جديد">حفظ جديد</option>
-                    <option value="مراجعة فقط">مراجعة فقط</option>
-                    <option value="تثبيت وتلاوة">تثبيت وتلاوة</option>
-                </select>
-            </div>
-
+			
             <!-- 3. الحفظ والمراجعة -->
             <div class="section-title">الحفظ والمراجعة</div>
 
@@ -268,7 +281,7 @@
             </div>
 
             <div class="form-group">
-                <label>مواضع المراجعة لم تم حفظه قديماً</label>
+                <label>واجب مراجعة الماضي</label>
                 <input type="text" name="مواضع المراجعة القديمة" placeholder="أدخل أجزاء أو سور المراجعة">
             </div>
 
@@ -279,17 +292,8 @@
                     <option value="أخطاء في التشكيل والضم والفتح">أخطاء في التشكيل والضم والفتح</option>
                     <option value="أخطاء في مخارج الحروف">أخطاء في مخارج الحروف</option>
                     <option value="أخطاء في أحكام التجويد">أخطاء في أحكام التجويد</option>
+					 <option value=" أخطاء في أحكام المدود">أخطاء في أحكام المدود</option>
                 </select>
-            </div>
-
-            <div class="form-group">
-                <label>مواضع تم واجب الحفظ الجديد</label>
-                <input type="text" name="واجب الحفظ الجديد" placeholder="حدد التكليف القادم">
-            </div>
-
-            <div class="form-group">
-                <label>مواضع واجب المراجعة للحفظ القديم</label>
-                <input type="text" name="واجب المراجعة القديم" placeholder="حدد السور المطلوبة للمراجعة القادمة">
             </div>
 
             <!-- 4. الآداب الإسلامية -->
@@ -298,11 +302,6 @@
             <div class="form-group">
                 <label>ما تم دراسته من الآداب الإسلامية</label>
                 <input type="text" name="الآداب المدروسة" placeholder="مثال: أدب بر الوالدين، أذكار النوم">
-            </div>
-
-            <div class="form-group">
-                <label>واجب صفحة الآداب الإسلامية</label>
-                <input type="text" name="واجب الآداب" placeholder="اكتب تكليف الآداب القادم">
             </div>
 
             <!-- 5. المرفقات والملاحظات -->
