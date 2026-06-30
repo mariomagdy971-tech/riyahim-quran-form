@@ -126,6 +126,10 @@
         .btn-submit:hover {
             opacity: 0.9;
         }
+        .btn-submit:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
@@ -315,17 +319,31 @@
             </div>
 
             <!-- Submit Button (End of Page) -->
-            <button type="submit" class="btn-submit">إرسال - Submit</button>
+            <button type="submit" class="btn-submit" id="submitBtn">إرسال - Submit</button>
         </form>
     </div>
 </div>
 
 <script>
-document.getElementById('evalForm').addEventListener('submit', function() {
+// رابط Google Apps Script (Web App) المسؤول عن تسجيل البيانات في Google Sheet
+var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbybZWqoR8v4CH0Ilu1rUE--4Uf86UEEISa1R_FKL4ZKKqbjBuKCoV95LPaHtXycrOHRTQ/exec';
+
+document.getElementById('evalForm').addEventListener('submit', function(e) {
     var teacherEmail = document.querySelector('[name="إيميل المعلمة"]').value;
     var studentEmail = document.querySelector('[name="إيميل الطالب"]').value;
     var emails = [teacherEmail, studentEmail].filter(Boolean).join(',');
     document.getElementById('ccemail').value = emails;
+
+    // إرسال نسخة من البيانات إلى Google Sheet (لا توقف إرسال الفورم العادي عبر الإيميل)
+    var sheetData = new FormData(this);
+    fetch(GOOGLE_SHEET_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        keepalive: true,
+        body: sheetData
+    });
+
+    // الفورم هيكمل إرساله للإيميل بشكل طبيعي بعد كده
 });
 </script>
 
